@@ -1,0 +1,782 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    * {
+       /* box-sizing: content-box;*/
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(to right,grey,white,grey);
+        position: static;
+        width: 1510px;
+    }
+    .back{
+       /* background-image:url('images/Rental-Car-Industry-3127x1344.jpg');*/
+      /*  background-position:center;*/
+       /* background-repeat:no-repeat;*/
+        height:500px;
+        width:1000px;
+      /*  margin-top:1px;*/
+    }
+    .nav1 {
+        display: flex;
+        font-size: 20px;
+        margin-left: 150px;
+        font-weight: 600;
+    }
+
+    .nav2 {
+        display: flex;
+        font-size: 25px;
+    }
+
+    .link_nav {
+        text-decoration: none;
+        color: black;
+        
+    }
+
+    li {
+        list-style: none;
+        padding-right: 30px;
+        padding-left: 10px;
+    }
+
+    .link_nav:hover {
+        color: red;
+        border-bottom: solid red;
+        border-bottom-width: 3px;
+    }
+
+    #log:hover {
+        color: green;
+        border-bottom: green;
+    }
+
+    select {
+        width: 250px;
+        padding: 10px;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    input {
+        width: 250px;
+        padding: 15px;
+        margin-right: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 4px 4px grey;
+        border:none;
+    }
+   /* section {
+        border-radius: 10px;
+        box-shadow: 1px 2px 4px 4px grey;
+        border: none;
+    }*/
+    select {
+        border-radius: 10px;
+        box-shadow: 1px 2px 4px 4px grey;
+        border: none;
+    }
+    .details {
+        margin-left: 50px;
+        margin-top: 18%;
+   /*     display:grid;
+        grid-template-columns:auto auto auto auto;*/
+   padding-bottom:30px;
+    }
+    #search {
+        font-size: 25px;
+        border-radius: 20px;
+        border: none;
+        background-color: orange;
+        color:white;
+        padding:8px;
+        margin-left:20px;
+        cursor:pointer;
+       
+  /*      box-shadow: 1px 2px 4px 4px yellow;*/
+    }
+        #search:hover {
+            background-color: green;
+            box-shadow: 1px 2px 4px 4px grey;
+            transition:0.5s;
+        }
+
+    label {
+        font-size: 22px;
+    }
+
+    .nav2 a:hover {
+        color: white;
+        background-color: greenyellow;
+        border: none;
+        transition: 0.5s;
+    }
+
+    .nav2 a {
+        background-color: rgb(255, 106, 0);
+        padding: 7px;
+        border-radius: 10px;
+    }
+
+    .flow {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding-top: 10px;
+    }
+
+    .image {
+        border-radius: 95px;
+        border: 3px dashed green;
+        box-shadow: 1px 2px 6px 7px grey;
+    }
+
+    .a {
+        margin: 70px 0px 50px 0px;
+    }
+
+    .b {
+        margin: 70px 0px 40px 0;
+    }
+
+    .model1 {
+        /*            border: 2px solid;*/
+        border-radius: 30px;
+        margin: 0 20px 40px 10px;
+        background-color: white;
+    }
+
+        .model1 i {
+            font-size: 15px;
+            padding: 5px 10px 20px 10px;
+        }
+
+    .model2 {
+        /*     border: 2px solid;*/
+        border-radius: 30px;
+        margin: 0 20px 40px 10px;
+        background-color: white;
+    }
+
+        .model2 i {
+            font-size: 15px;
+            padding: 5px 10px 20px 10px;
+        }
+
+    .model3 {
+        /*  border: 2px solid;*/
+        border-radius: 30px;
+        margin: 0 20px 40px 10px;
+        background-color: white;
+    }
+
+        .model3 i {
+            font-size: 15px;
+            padding: 5px 10px 20px 10px;
+        }
+
+    .icon {
+        padding-left: 25px;
+    }
+
+        .icon img {
+            padding: 0 8px 0 10px;
+        }
+
+    .cost {
+        background-color: rgb(160, 150, 150);
+        margin: 0 15px 0 15px;
+    }
+        
+
+    .amt {
+        padding-left: 180px;
+        font-size: 25px;
+        color: red;
+    }
+   /* #dd{
+        padding-right:150px;
+    }*/
+
+    .models {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 0 70px 0 70px;
+    }
+
+    .card_image {
+        padding-left: 38px;
+        padding-top: 20px;
+    }
+
+        .card_image img {
+            border-radius: 30px;
+        }
+
+    .card {
+        background-color: rgb(251, 241, 241);
+        padding-top:50px;
+        
+    }
+
+    .Button1 {
+        margin-left: 50px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: none;
+        background-color: black;
+        border-radius: 10px;
+        color: white;
+    }
+        .Button1:hover {
+            background-color: springgreen;
+            transition: 0.5s;
+            box-shadow: 1px 2px 4px 4px blue;
+            cursor:pointer;
+        }
+
+    h3 {
+        margin-left: 20px;
+    }
+
+    .but i {
+    }
+
+    i {
+        margin-right: 10px;
+    }
+
+    .record {
+        background-image: url(images/banner5.jpg);
+        height: 350px;
+    }
+
+        .record h1 {
+            font-size: 40px;
+            color: white;
+            padding-top: 50px;
+        }
+
+    .r1 {
+    }
+
+        .r1 i {
+            color: white;
+            background-color: black;
+            height: 55px;
+            width: 70px;
+            font-size: 40px;
+            padding-left: 30px;
+            padding-top: 20px;
+            margin-left: 40px;
+            margin-bottom: 8px;
+            border-radius: 20px;
+        }
+
+        .r1 b {
+            font-size: 30px;
+            color: rgb(75, 208, 37)
+        }
+
+    .r {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding-right: 40px;
+    }
+
+    .as {
+        background-color: white;
+        margin-right: 50px;
+        margin-left: 70px;
+        border-radius: 30px;
+        margin-top: 40px;
+    }
+
+    .r1 center {
+        font-weight: 700;
+    }
+
+    .as:hover i {
+        color: red;
+    }
+
+    .as:hover {
+        margin-top: 10px;
+        margin-bottom:30px;
+        transition: 0.5s;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    #phone, #email {
+        font-size: 30px;
+        background-color: orange;
+        height: 45px;
+        width: 50px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        padding-left: 12px;
+        padding-top: 10px;
+    }
+
+    #fb {
+        color: cornflowerblue;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    #insta {
+        color: hotpink;
+        font-size: 30px;
+    }
+
+    #tw {
+        color: blue;
+        font-size: 30px;
+    }
+
+    #link {
+        color: darkblue;
+        font-size: 30px;
+    }
+
+    footer {
+        margin-top: 50px;
+        margin-left: 0px;
+        background-image:url(images/360_F_495286577_rpsT2Shmr6g81hOhGXALhxWOfx1vOQBa.jpg);
+        color:white;
+    }
+
+    .f-icon input {
+        margin-top: 2px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 3px 2px 4px orange;
+    }
+
+    .f1 li {
+        padding-bottom: 20px;
+    }
+
+    .f2 li {
+        padding-bottom: 20px;
+    }
+
+    .f3 li {
+        padding-bottom: 20px;
+    }
+
+    .det {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 40px;
+    }
+
+        .det p {
+            line-height: 35px;
+            margin-left: 30px;
+            margin-top: 40px;
+        }
+
+        .det img {
+            border-radius: 20px;
+            box-shadow: 1px 2px 4px 4px grey;
+        }
+
+    .title {
+        background-image: url(images/banner5.jpg);
+        height: 200px;
+        color: white;
+        font-weight: 400;
+    }
+
+        .title span {
+            color: goldenrod;
+            font-weight: 400;
+        }
+
+        .title h1 {
+            font-size: 45px;
+        }
+        marquee{
+            font-size:40px;
+            color:white;
+        }
+        /*.nav_bar{
+            position:sticky;
+        }*/
+    #but1,#but2,#but3,#but4 {
+        margin-right: 30px;
+        font-size: 30px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 1px 2px 4px 4px grey;
+        margin-bottom:30px;
+      
+    }
+    a {
+        text-decoration: none;
+        color:black;
+    }
+    #but1:hover {
+        background-color: red;
+        transition: 0.5s;
+    }
+    #but1 a:hover{
+ color:white;
+ transition:0.5s;
+    }
+    #but2:hover {
+        background-color: red;
+        transition: 0.5s;
+    }
+
+    #but2 a:hover {
+        color: white;
+        transition: 0.5s;
+    }
+    #but3:hover {
+        background-color: red;
+        transition: 0.5s;
+    }
+
+    #but3 a:hover {
+        color: white;
+        transition: 0.5s;
+    }
+    #but4:hover {
+        background-color: red;
+    }
+
+    #but4 a:hover {
+        color: white;
+    }
+    .h1{
+        font-size:40px;
+        color:brown;
+    }
+</style>
+<body>
+    <section class="nav_bar">
+        <div class="nav">
+            <img src="images/logo 1.jpg" height="90px" width="100px" />
+            <ul class="nav1">
+                <li><a href="htmlpage.html" class="link_nav">Home</a></li>
+                <li><a href="About.html" class="link_nav">About</a></li>
+
+                <li><a href="contact.html" class="link_nav">Contact Us</a></li>
+
+
+            </ul>
+
+            <ul class="nav2">
+                <li><a href="login.html"><i class="fa-solid fa-user"></i>Login</a></li>
+                <li><a href="Reegistration Page.html"><i class="fa-solid fa-lock"></i>Register</a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="back">
+            <img src="images/car rent.jpg" height="750px" width="1510px"/>
+            <!--<marquee behavior="slide" scrollamount="100">Best </marquee>
+            <marquee behavior="slide" scrollamount="80">Car Rental </marquee>
+            <marquee behavior="slide" scrollamount="75">In Town</marquee>-->
+        </div>
+        <div class="details">
+            <label>Pick Up Location</label>
+            <select>
+                <option>Coimbatore</option>
+                <option>Chennai</option>
+                <option>Bangalore</option>
+            </select>
+            <label>Pick Up Date</label>
+            <input type="date" />
+            <label>Return Date</label>
+            <input type="date" />     <button id="search">Search</button>
+
+        </div>
+
+    </section>
+    <section>
+        <div class="car_but">
+            <center>
+                <h1 class="h1">Car Models</h1>
+                <button id="but1"><a href="">kia</a></button>
+                <button id="but2" ><a href="">Benz</a></button>
+                <button id="but3"><a href="">Audi</a></button>
+               
+            </center>
+        </div>
+    </section>
+    <section class="card">
+        <div class="models">
+            <div class="model1">
+
+                <div class="card_image">
+                    <img src="images/card1.jpg" width="350px" height="300px" />
+                </div>
+
+                <center>
+                    <h3>Kia Soul 2016</h3>
+                    <div>
+                        <i class="fa-solid fa-map-location-dot"></i><i>Manual</i><i class="fa-solid fa-gauge-high"></i><i>14km</i>  <i class="fa-solid fa-gas-pump"></i><i>Diesel</i><br />
+                        <img src="images/car-steering-wheel.png" height="20px" width="20px" /><i>Basic</i> <i class="fa-solid fa-handshake-simple"></i><i>2022</i> <img src="images/seat.png" height="20px" width="20px" /><i>5 Persons</i>
+                    </div>
+                    <div class="cost">
+                        <i id="dd" class="fa-solid fa-location-dot"></i><i>Hyde Park</i> <i class="amt">$150</i>/Day
+                    </div>
+                </center>
+                <div>
+                    <input type="submit" class="Button1" />
+                </div>
+            </div>
+
+            <div class="model2">
+
+                <div class="card_image">
+                    <img src="images/kia-ev-6-2.jpg" width="350px" height="300px" />
+                </div>
+
+                <center>
+                    <h3>Kia Soul 2016</h3>
+                    <div>
+                        <i class="fa-solid fa-map-location-dot"></i><i>Manual</i><i class="fa-solid fa-gauge-high"></i><i>14km</i>  <i class="fa-solid fa-gas-pump"></i><i>Diesel</i><br />
+                        <img src="images/car-steering-wheel.png" height="20px" width="20px" /><i>Basic</i> <i class="fa-solid fa-handshake-simple"></i><i>2022</i> <img src="images/seat.png" height="20px" width="20px" /><i>5 Persons</i>
+                    </div>
+                    <div class="cost">
+                        <i class="fa-solid fa-location-dot"></i><i>Hyde Park</i> <i class="amt">$150</i>/Day
+                    </div>
+                </center>
+                <div>
+                    <input type="submit" class="Button1" />
+                </div>
+            </div>
+
+
+
+            <div class="model3">
+
+                <div class="card_image">
+                    <img src="images/1627902020-Kia-Stinger.jpg" width="350px" height="300px" />
+                </div>
+
+                <center>
+                    <h3>Kia Soul 2016</h3>
+                    <div>
+                        <i class="fa-solid fa-map-location-dot"></i><i>Manual</i><i class="fa-solid fa-gauge-high"></i><i>14km</i>  <i class="fa-solid fa-gas-pump"></i><i>Diesel</i><br />
+                        <img src="images/car-steering-wheel.png" height="20px" width="20px" /><i>Basic</i> <i class="fa-solid fa-handshake-simple"></i><i>2022</i> <img src="images/seat.png" height="20px" width="20px" /><i>5 Persons</i>
+                    </div>
+                    <div class="cost">
+                        <i class="fa-solid fa-location-dot"></i><i>Hyde Park</i> <i class="amt">$150</i>/Day
+                    </div>
+                </center>
+                <div>
+                    <input type="submit" class="Button1" />
+                </div>
+            </div>
+
+
+
+
+            <div class="model1">
+
+                <div class="card_image">
+                    <img src="images/Kia-Stinger.jpg" width="350px" height="300px" />
+                </div>
+
+                <center>
+                    <h3>Kia Soul 2016</h3>
+                    <div>
+                        <i class="fa-solid fa-map-location-dot"></i><i>Manual</i><i class="fa-solid fa-gauge-high"></i><i>14km</i>  <i class="fa-solid fa-gas-pump"></i><i>Diesel</i><br />
+                        <img src="images/car-steering-wheel.png" height="20px" width="20px" /><i>Basic</i> <i class="fa-solid fa-handshake-simple"></i><i>2022</i> <img src="images/seat.png" height="20px" width="20px" /><i>5 Persons</i>
+                    </div>
+                    <div class="cost">
+                        <i class="fa-solid fa-location-dot"></i><i>Hyde Park</i> <i class="amt">$150</i>/Day
+                    </div>
+                </center>
+                <div>
+                    <input type="submit" class="Button1" />
+                </div>
+            </div>
+
+            <div class="model2">
+
+                <div class="card_image">
+                    <img src="images/Kia-Carnival-2019-660x440.jpg" width="350px" height="300px" />
+                </div>
+
+                <center>
+                    <h3>Kia Soul 2016</h3>
+                    <div>
+                        <i class="fa-solid fa-map-location-dot"></i><i>Manual</i><i class="fa-solid fa-gauge-high"></i><i>14km</i>  <i class="fa-solid fa-gas-pump"></i><i>Diesel</i><br />
+                        <img src="images/car-steering-wheel.png" height="20px" width="20px" /><i>Basic</i> <i class="fa-solid fa-handshake-simple"></i><i>2022</i> <img src="images/seat.png" height="20px" width="20px" /><i>5 Persons</i>
+                    </div>
+                    <div class="cost">
+                        <i class="fa-solid fa-location-dot"></i><i>Hyde Park</i> <i class="amt">$150</i>/Day
+                    </div>
+                </center>
+                <div>
+                    <input type="submit" class="Button1" />
+                </div>
+            </div>
+
+
+
+            <div class="model3">
+
+                <div class="card_image">
+                    <img src="images/kia.jfif" width="350px" height="300px" />
+                </div>
+
+                <center>
+                    <h3>Kia Soul 2016</h3>
+                    <div>
+                        <i class="fa-solid fa-map-location-dot"></i><i>Manual</i><i class="fa-solid fa-gauge-high"></i><i>14km</i>  <i class="fa-solid fa-gas-pump"></i><i>Diesel</i><br />
+                        <img src="images/car-steering-wheel.png" height="20px" width="20px" /><i>Basic</i> <i class="fa-solid fa-handshake-simple"></i><i>2022</i> <img src="images/seat.png" height="20px" width="20px" /><i>5 Persons</i>
+                    </div>
+                    <div class="cost">
+                        <i class="fa-solid fa-location-dot"></i><i>Hyde Park</i> <i class="amt">$150</i>/Day
+                    </div>
+                </center>
+                <div>
+                    <input type="submit" class="Button1" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="a">
+        <center>
+            <h1>How It Works</h1>
+            <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </p>
+        </center>
+    </div>
+    <div class="flow">
+        <div>
+            <center> <img src="images/PIck up 2.png" width="150px" height="150px" class="image" /></center>
+            <center> <h1>Choose Location</h1></center>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+        <div>
+            <center> <img src="images/Choose Loaction.jpg" width="150px" height="150px" class="image" /></center>
+            <center> <h1>Pick up Location</h1></center>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+
+        </div>
+        <div>
+            <center><img src="images/car book.png" width="150px" height="150px" class="image" /></center>
+            <center>     <h1>Book Car</h1></center>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+
+        </div>
+    </div>
+    <section>
+        <div class="record">
+            <center><h1><i>Track By Records</i></h1></center>
+
+            <div class="r">
+                <div class="as">
+                    <div class="r1">
+                        <center> Happy Customer</center><br />
+                        <i class="fa-solid fa-car"></i> <b>16k+</b>
+                    </div>
+                </div>
+
+                <div class="as">
+                    <div class="r1">
+                        <center> Count of Cars</center><br />
+                        <i class="fa-solid fa-headphones-simple"></i> <b>2546k+</b>
+                    </div>
+                </div>
+
+                <div class="as">
+                    <div class="r1">
+                        <center> Car Center Solutions</center><br />
+                        <i class="fa-regular fa-heart"></i><b>625k+</b>
+                    </div>
+                </div>
+
+                <div class="as">
+                    <div class="r1">
+                        <center> Total Kilometer</center><br />
+                        <i class="fa-solid fa-gauge"></i> <b>200k+</b>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="f1">
+                <ul>
+                    <h2>About Company</h2>
+                    <li>Our Company</li>
+                    <li>Shop</li>
+                    <li>DreamsRental USA</li>
+                    <li>DreamsRental Worldwide</li>
+                    <li>DreamsRental Racing</li>
+                    <li>DreamsRental Racing</li>
+                    <li>Virtual Auto Show</li>
+                </ul>
+            </div>
+            <div class="f2">
+                <ul>
+                    <h2>Vehicle Type</h2>
+                    <li>Rental List</li>
+                    <li>Rental Grid</li>
+                    <li>BLog List</li>
+                    <li>Blog Grid</li>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                    <li>Testimonials</li>
+                </ul>
+            </div>
+            <div class="f3">
+                <ul>
+                    <h2>Quick Links</h2>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Gallery</li>
+                    <li>Our Team</li>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>Virtual Auto Show</li>
+                </ul>
+            </div>
+            <div class="f-icon">
+                <ul>
+                    <h2>Contact Info</h2>
+                    <li>
+                        <i class="fa-solid fa-phone-volume" id="phone"></i>
+                        (+1) 88888 88888
+                    </li>
+                    <li><i class="fa-solid fa-envelope" id="email"></i>demo@example.com</li>
+                    <li><input type="email" placeholder="Enter Your Email" /></li>
+                    <li><b>Connect with us</b></li>
+
+                    <li><i class="fa-brands fa-facebook" id="fb"></i> <i class="fa-brands fa-instagram" id="insta"></i> <i class="fa-brands fa-twitter" id="tw"></i> <i class="fa-brands fa-linkedin" id="link"></i></li>
+
+                </ul>
+            </div>
+
+        </div>
+        <center> <b>Copyright 2024 © Theme Created By Dreams Rent, All Rights Reserved.</b></center>
+    </footer>
+
+</body>
+</html>
